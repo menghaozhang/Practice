@@ -14,7 +14,7 @@ final class CardCollectionView: UICollectionView, UICollectionViewDelegateFlowLa
     
     private struct Constants {
         static let className = "CardCollectionViewCell"
-        static let reuseId = "ReuseID"
+        static let reuseId = "card_reuse_id"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,6 +23,6 @@ final class CardCollectionView: UICollectionView, UICollectionViewDelegateFlowLa
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
-        register(UINib(nibName: Constants.className, bundle: nil), forCellWithReuseIdentifier: Constants.reuseId)
+        register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "card_reuse_id")
     }
 }

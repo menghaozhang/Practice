@@ -33,6 +33,9 @@
 		DA082D311DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */; };
 		DA082D321DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */; };
 		DA082D331DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */; };
+		DA082D351DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D341DC3DA4E001F870F /* CardCollectionViewLayout.swift */; };
+		DA082D361DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D341DC3DA4E001F870F /* CardCollectionViewLayout.swift */; };
+		DA082D371DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D341DC3DA4E001F870F /* CardCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +83,7 @@
 		DA082D241DC3D1AC001F870F /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
 		DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewDataManager.swift; sourceTree = "<group>"; };
+		DA082D341DC3DA4E001F870F /* CardCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewLayout.swift; sourceTree = "<group>"; };
 		DB634C0AF6BFC190B5E217F7 /* Pods-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Practice/Pods-Practice.release.xcconfig"; sourceTree = "<group>"; };
 		FC714AC52164458E7FB42DDC /* Pods_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF0D5BEBA2685D7CDC10899 /* Pods-PracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeTests/Pods-PracticeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +171,8 @@
 				DA082CF31DC3C4FE001F870F /* LaunchScreen.storyboard */,
 				DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */,
 				DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */,
-				DA082D221DC3D153001F870F /* CollectionViewCell */,
+				DA082D341DC3DA4E001F870F /* CardCollectionViewLayout.swift */,
+				DA082D221DC3D153001F870F /* CardViewCell */,
 				DA082D1B1DC3C8C7001F870F /* RemoteService */,
 				DA082D2F1DC3D3FE001F870F /* Data */,
 				DA082D1A1DC3C8AD001F870F /* Supporting Files */,
@@ -211,13 +216,13 @@
 			name = RemoteService;
 			sourceTree = "<group>";
 		};
-		DA082D221DC3D153001F870F /* CollectionViewCell */ = {
+		DA082D221DC3D153001F870F /* CardViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				DA082D231DC3D1AC001F870F /* CardCollectionViewCell.swift */,
 				DA082D241DC3D1AC001F870F /* CardCollectionViewCell.xib */,
 			);
-			name = CollectionViewCell;
+			name = CardViewCell;
 			sourceTree = "<group>";
 		};
 		DA082D2F1DC3D3FE001F870F /* Data */ = {
@@ -506,6 +511,7 @@
 				DA082CED1DC3C4FE001F870F /* LandingViewController.swift in Sources */,
 				DA082D2C1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,
 				DA082D251DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
+				DA082D351DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */,
 				DA082CEB1DC3C4FE001F870F /* AppDelegate.swift in Sources */,
 				DA082D311DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */,
 				DA082D1D1DC3C8E3001F870F /* RemoteService.swift in Sources */,
@@ -517,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA082D321DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */,
+				DA082D361DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */,
 				DA082D261DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
 				DA082D2D1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,
 				DA082D001DC3C4FE001F870F /* PracticeTests.swift in Sources */,
@@ -528,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA082D331DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */,
+				DA082D371DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */,
 				DA082D271DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
 				DA082D2E1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,
 				DA082D0B1DC3C4FE001F870F /* PracticeUITests.swift in Sources */,

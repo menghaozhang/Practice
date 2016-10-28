@@ -18,9 +18,6 @@ final class DefaultRemoteService: RemoteService {
                         let json = try JSONSerialization.jsonObject(with: data, options: []) as! JSON
                         let entry = Content(json: json)?.playlist?.a
                         completion(entry, nil)
-//                        self.cardViewCellDataManager.a = entry
-//                        self.cleanUpGame()
-//                        self.setUpGame()
                         
                     } catch let error as NSError {
                         completion(nil, error)
