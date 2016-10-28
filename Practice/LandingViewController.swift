@@ -12,16 +12,23 @@ import UIKit
  */
 final class LandingViewController: UIViewController {
 
+    private var collectionView: CardCollectionView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setUpGame()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    private func cleanUpGame() {
+        if collectionView != nil {
+            collectionView?.removeFromSuperview()
+        }
     }
-
-
+    
+    private func setUpGame() {
+        collectionView = CardCollectionView(frame: view.frame, collectionViewLayout: UICollectionViewFlowLayout())
+        view.addSubview(collectionView!)
+    }
 }
 

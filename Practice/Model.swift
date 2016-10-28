@@ -7,7 +7,7 @@
 //
 import Gloss
 
-struct Source: Decodable {
+struct Content: Decodable {
     let playlist: Playlist?
     let a = "a"
     

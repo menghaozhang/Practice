@@ -6,7 +6,9 @@
 //  Copyright © 2016 Menghao. All rights reserved.
 //
 import Foundation
-
+/**
+ Configuration for get the remote URL
+ */
 final class Configuration {
     static let sharedInstance = Configuration()
     private var dataEndPoint: String?

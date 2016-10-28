@@ -21,6 +21,18 @@
 		DA082D1D1DC3C8E3001F870F /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D1C1DC3C8E3001F870F /* RemoteService.swift */; };
 		DA082D1F1DC3C8F2001F870F /* DefaultRemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D1E1DC3C8F2001F870F /* DefaultRemoteService.swift */; };
 		DA082D211DC3CBA6001F870F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D201DC3CBA6001F870F /* Configuration.swift */; };
+		DA082D251DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D231DC3D1AC001F870F /* CardCollectionViewCell.swift */; };
+		DA082D261DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D231DC3D1AC001F870F /* CardCollectionViewCell.swift */; };
+		DA082D271DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D231DC3D1AC001F870F /* CardCollectionViewCell.swift */; };
+		DA082D281DC3D1AC001F870F /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA082D241DC3D1AC001F870F /* CardCollectionViewCell.xib */; };
+		DA082D291DC3D1AC001F870F /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA082D241DC3D1AC001F870F /* CardCollectionViewCell.xib */; };
+		DA082D2A1DC3D1AC001F870F /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA082D241DC3D1AC001F870F /* CardCollectionViewCell.xib */; };
+		DA082D2C1DC3D3E9001F870F /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */; };
+		DA082D2D1DC3D3E9001F870F /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */; };
+		DA082D2E1DC3D3E9001F870F /* CardCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */; };
+		DA082D311DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */; };
+		DA082D321DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */; };
+		DA082D331DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +76,10 @@
 		DA082D1C1DC3C8E3001F870F /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		DA082D1E1DC3C8F2001F870F /* DefaultRemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRemoteService.swift; sourceTree = "<group>"; };
 		DA082D201DC3CBA6001F870F /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DA082D231DC3D1AC001F870F /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA082D241DC3D1AC001F870F /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionView.swift; sourceTree = "<group>"; };
+		DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewDataManager.swift; sourceTree = "<group>"; };
 		DB634C0AF6BFC190B5E217F7 /* Pods-Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Practice.release.xcconfig"; path = "Pods/Target Support Files/Pods-Practice/Pods-Practice.release.xcconfig"; sourceTree = "<group>"; };
 		FC714AC52164458E7FB42DDC /* Pods_Practice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Practice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF0D5BEBA2685D7CDC10899 /* Pods-PracticeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PracticeTests/Pods-PracticeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,9 +165,11 @@
 				DA082CEC1DC3C4FE001F870F /* LandingViewController.swift */,
 				DA082CEE1DC3C4FE001F870F /* Main.storyboard */,
 				DA082CF31DC3C4FE001F870F /* LaunchScreen.storyboard */,
-				DA082D201DC3CBA6001F870F /* Configuration.swift */,
-				DA082D181DC3C644001F870F /* Model.swift */,
+				DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */,
+				DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */,
+				DA082D221DC3D153001F870F /* CollectionViewCell */,
 				DA082D1B1DC3C8C7001F870F /* RemoteService */,
+				DA082D2F1DC3D3FE001F870F /* Data */,
 				DA082D1A1DC3C8AD001F870F /* Supporting Files */,
 			);
 			path = Practice;
@@ -191,6 +209,24 @@
 				DA082D1E1DC3C8F2001F870F /* DefaultRemoteService.swift */,
 			);
 			name = RemoteService;
+			sourceTree = "<group>";
+		};
+		DA082D221DC3D153001F870F /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				DA082D231DC3D1AC001F870F /* CardCollectionViewCell.swift */,
+				DA082D241DC3D1AC001F870F /* CardCollectionViewCell.xib */,
+			);
+			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		DA082D2F1DC3D3FE001F870F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DA082D181DC3C644001F870F /* Model.swift */,
+				DA082D201DC3CBA6001F870F /* Configuration.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA082D281DC3D1AC001F870F /* CardCollectionViewCell.xib in Resources */,
 				DA082CF51DC3C4FE001F870F /* LaunchScreen.storyboard in Resources */,
 				DA082CF21DC3C4FE001F870F /* Assets.xcassets in Resources */,
 				DA082CF01DC3C4FE001F870F /* Main.storyboard in Resources */,
@@ -321,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA082D291DC3D1AC001F870F /* CardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA082D2A1DC3D1AC001F870F /* CardCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +504,10 @@
 				DA082D191DC3C644001F870F /* Model.swift in Sources */,
 				DA082D1F1DC3C8F2001F870F /* DefaultRemoteService.swift in Sources */,
 				DA082CED1DC3C4FE001F870F /* LandingViewController.swift in Sources */,
+				DA082D2C1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,
+				DA082D251DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
 				DA082CEB1DC3C4FE001F870F /* AppDelegate.swift in Sources */,
+				DA082D311DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */,
 				DA082D1D1DC3C8E3001F870F /* RemoteService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +516,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA082D321DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */,
+				DA082D261DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
+				DA082D2D1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,
 				DA082D001DC3C4FE001F870F /* PracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +527,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA082D331DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */,
+				DA082D271DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
+				DA082D2E1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,
 				DA082D0B1DC3C4FE001F870F /* PracticeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

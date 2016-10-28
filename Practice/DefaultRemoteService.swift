@@ -16,9 +16,11 @@ final class DefaultRemoteService: RemoteService {
                 if let data = response.data {
                     do {
                         let json = try JSONSerialization.jsonObject(with: data, options: []) as! JSON
-                        let entry = Source(json: json)?.playlist?.a
+                        let entry = Content(json: json)?.playlist?.a
                         completion(entry, nil)
-
+//                        self.cardViewCellDataManager.a = entry
+//                        self.cleanUpGame()
+//                        self.setUpGame()
                         
                     } catch let error as NSError {
                         completion(nil, error)
@@ -26,7 +28,6 @@ final class DefaultRemoteService: RemoteService {
                 }
             }
         }
-        
         completion(nil, NSError(domain: "EmptyURL", code: 001))
     }
 }
