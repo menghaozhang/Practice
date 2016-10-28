@@ -7,8 +7,10 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
+/**
+ The ViewController for landing screen
+ */
+final class LandingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
