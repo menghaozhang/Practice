@@ -5,6 +5,7 @@
 //  Created by paul on 28/10/16.
 //  Copyright © 2016 Menghao. All rights reserved.
 //
+
 import Gloss
 
 struct Content: Decodable {

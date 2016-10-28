@@ -31,6 +31,8 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card_reuse_id", for: indexPath) as! CardCollectionViewCell
         cell.titleLabel.text = a?[indexPath.item].title ?? "No title"
         cell.artistLabel.text = a?[indexPath.item].artist ?? "No artist"
+
+        cell.coverImageView.setImageOrPlaceholder(URL(string: a?[indexPath.item].image ?? ""), placeholder: "")
         return cell
     }
     

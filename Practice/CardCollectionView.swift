@@ -23,6 +23,6 @@ final class CardCollectionView: UICollectionView, UICollectionViewDelegateFlowLa
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
-        register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "card_reuse_id")
+        register(UINib(nibName: Constants.className, bundle: nil), forCellWithReuseIdentifier: Constants.reuseId)
     }
 }
