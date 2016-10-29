@@ -164,6 +164,15 @@
 			name = CardView;
 			sourceTree = "<group>";
 		};
+		DA06D93E1DC498EF0031F322 /* HelpersAndExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				DA06D9271DC3F4600031F322 /* Extension.swift */,
+				DA06D93A1DC48F340031F322 /* NavHelper.swift */,
+			);
+			name = HelpersAndExtensions;
+			sourceTree = "<group>";
+		};
 		DA082CDE1DC3C4FE001F870F = {
 			isa = PBXGroup;
 			children = (
@@ -194,12 +203,11 @@
 				DA06D9361DC48DB30031F322 /* DetailsViewController.swift */,
 				DA082CEE1DC3C4FE001F870F /* Main.storyboard */,
 				DA082CF31DC3C4FE001F870F /* LaunchScreen.storyboard */,
-				DA06D9271DC3F4600031F322 /* Extension.swift */,
-				DA06D93A1DC48F340031F322 /* NavHelper.swift */,
 				DA06D9301DC4874A0031F322 /* CardView */,
-				DA082D221DC3D153001F870F /* CardViewCell */,
+				DA082D221DC3D153001F870F /* CollectionViewCell */,
 				DA082D1B1DC3C8C7001F870F /* RemoteService */,
 				DA082D2F1DC3D3FE001F870F /* Data */,
+				DA06D93E1DC498EF0031F322 /* HelpersAndExtensions */,
 				DA082D1A1DC3C8AD001F870F /* Supporting Files */,
 			);
 			path = Practice;
@@ -241,13 +249,13 @@
 			name = RemoteService;
 			sourceTree = "<group>";
 		};
-		DA082D221DC3D153001F870F /* CardViewCell */ = {
+		DA082D221DC3D153001F870F /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				DA082D231DC3D1AC001F870F /* CardCollectionViewCell.swift */,
 				DA082D241DC3D1AC001F870F /* CardCollectionViewCell.xib */,
 			);
-			name = CardViewCell;
+			name = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		DA082D2F1DC3D3FE001F870F /* Data */ = {

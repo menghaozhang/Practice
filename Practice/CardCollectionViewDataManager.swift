@@ -13,7 +13,7 @@ import UIKit
 final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
     internal var a: [Entry]?
-    private let PlaceHolderImage = UIImage(named: "PlaceHolderImage")
+    private let PlaceHolderImage = UIImage(named: "placeHolder")
     
     private struct Constants {
         static let numberOfSections = 1
@@ -33,17 +33,16 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
         cell.titleLabel.text = a?[indexPath.item].title ?? "No title"
         cell.artistLabel.text = a?[indexPath.item].artist ?? "No artist"
         cell.coverImageView.image = PlaceHolderImage
-        cell.coverImageView.setImageOrPlaceholder(a?[indexPath.item].image ?? "", placeholder: "PlaceHolderImage")
+        cell.coverImageView.setImageOrPlaceholder(a?[indexPath.item].image ?? "", placeholder: "placeHolder")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
-        NavigationHelper.sharedInstance.navTo(viewController!)
-        
+        if let entry = a?[indexPath.item] {
+            viewController?.item = entry
+            NavigationHelper.sharedInstance.navTo(viewController!)
+        }
     }
-    
-    
-    
 }

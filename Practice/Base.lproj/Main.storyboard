@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,8 +38,41 @@
                     <view key="view" contentMode="scaleToFill" id="Maz-q4-UmT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CeO-r2-P37">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CeO-r2-P37" secondAttribute="height" multiplier="3:2" id="mcX-qU-sQr"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA9-cq-C0d">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pda-Xv-skS">
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mA9-cq-C0d" firstAttribute="top" secondItem="CeO-r2-P37" secondAttribute="bottom" constant="8" symbolic="YES" id="1YR-Ak-40j"/>
+                            <constraint firstItem="Pda-Xv-skS" firstAttribute="top" secondItem="mA9-cq-C0d" secondAttribute="bottom" constant="8" id="3NU-fg-H0f"/>
+                            <constraint firstItem="CeO-r2-P37" firstAttribute="leading" secondItem="Maz-q4-UmT" secondAttribute="leadingMargin" id="75K-0x-sz3"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Pda-Xv-skS" secondAttribute="trailing" id="DSl-eT-wgl"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="mA9-cq-C0d" secondAttribute="trailing" id="HqH-kG-Kq0"/>
+                            <constraint firstItem="CeO-r2-P37" firstAttribute="top" secondItem="LDA-yK-rx8" secondAttribute="bottom" id="KpP-Tw-sVb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mA9-cq-C0d" secondAttribute="leading" id="TsF-iA-gXJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Pda-Xv-skS" secondAttribute="leading" id="lvh-dO-Xss"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CeO-r2-P37" secondAttribute="trailing" id="wGZ-7k-niI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="artistLabel" destination="Pda-Xv-skS" id="Flb-bi-P65"/>
+                        <outlet property="detailImageView" destination="CeO-r2-P37" id="nvm-Cm-aC9"/>
+                        <outlet property="titleLabel" destination="mA9-cq-C0d" id="0Mp-x7-y8S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYP-to-uDa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
