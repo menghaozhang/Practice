@@ -13,6 +13,7 @@ import UIKit
 final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
     internal var a: [Entry]?
+    private let PlaceHolderImage = UIImage(named: "PlaceHolderImage")
     
     private struct Constants {
         static let numberOfSections = 1
@@ -31,8 +32,8 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card_reuse_id", for: indexPath) as! CardCollectionViewCell
         cell.titleLabel.text = a?[indexPath.item].title ?? "No title"
         cell.artistLabel.text = a?[indexPath.item].artist ?? "No artist"
-
-        cell.coverImageView.setImageOrPlaceholder(URL(string: a?[indexPath.item].image ?? ""), placeholder: "")
+        cell.coverImageView.image = PlaceHolderImage
+        cell.coverImageView.setImageOrPlaceholder(a?[indexPath.item].image ?? "", placeholder: "PlaceHolderImage")
         return cell
     }
     
