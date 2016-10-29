@@ -12,13 +12,17 @@ import UIKit
  */
 final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    internal var a: [Entry]?
-    private let PlaceHolderImage = UIImage(named: "placeHolder")
-    
     private struct Constants {
         static let numberOfSections = 1
         static let messageViewAutoDismissDuration: Double = 1
+        static let fallBackTitle = "Unknow title"
+        static let fallBackArtist = "Unknow Artist"
+        static let placeHolder = "placeHolder"
+        static let cardReuseId = "card_reuse_id"
     }
+    
+    internal var a: [Entry]?
+    private let PlaceHolderImage = UIImage(named: Constants.placeHolder)
     
     internal func numberOfSections(in collectionView: UICollectionView) -> Int {
         return Constants.numberOfSections
@@ -29,11 +33,11 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
     }
     
     internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card_reuse_id", for: indexPath) as! CardCollectionViewCell
-        cell.titleLabel.text = a?[indexPath.item].title ?? "No title"
-        cell.artistLabel.text = a?[indexPath.item].artist ?? "No artist"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cardReuseId, for: indexPath) as! CardCollectionViewCell
+        cell.titleLabel.text = a?[indexPath.item].title ?? Constants.fallBackTitle
+        cell.artistLabel.text = a?[indexPath.item].artist ?? Constants.fallBackArtist
         cell.coverImageView.image = PlaceHolderImage
-        cell.coverImageView.setImageOrPlaceholder(a?[indexPath.item].image ?? "", placeholder: "placeHolder")
+        cell.coverImageView.setImageOrPlaceholder(a?[indexPath.item].image ?? "", placeholder: Constants.placeHolder)
         return cell
     }
     

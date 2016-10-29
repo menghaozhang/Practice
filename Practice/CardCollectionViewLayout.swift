@@ -23,6 +23,7 @@ final class CardCollectionViewLayout: UICollectionViewFlowLayout {
     
     override func prepare() {
         super.prepare()
-        itemSize = CGSize(width: 200, height: 200)
+        Helper.sharedInstance.traitCollection = self.collectionView?.traitCollection
+        itemSize = Helper.sharedInstance.itemSize()
     }
 }
