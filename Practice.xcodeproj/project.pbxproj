@@ -16,6 +16,12 @@
 		DA06D92C1DC3F48D0031F322 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D92B1DC3F48D0031F322 /* Model.swift */; };
 		DA06D92D1DC3F48D0031F322 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D92B1DC3F48D0031F322 /* Model.swift */; };
 		DA06D92E1DC3F48D0031F322 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D92B1DC3F48D0031F322 /* Model.swift */; };
+		DA06D9371DC48DB30031F322 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D9361DC48DB30031F322 /* DetailsViewController.swift */; };
+		DA06D9381DC48DB30031F322 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D9361DC48DB30031F322 /* DetailsViewController.swift */; };
+		DA06D9391DC48DB30031F322 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D9361DC48DB30031F322 /* DetailsViewController.swift */; };
+		DA06D93B1DC48F340031F322 /* NavHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D93A1DC48F340031F322 /* NavHelper.swift */; };
+		DA06D93C1DC48F340031F322 /* NavHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D93A1DC48F340031F322 /* NavHelper.swift */; };
+		DA06D93D1DC48F340031F322 /* NavHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA06D93A1DC48F340031F322 /* NavHelper.swift */; };
 		DA082CEB1DC3C4FE001F870F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082CEA1DC3C4FE001F870F /* AppDelegate.swift */; };
 		DA082CED1DC3C4FE001F870F /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA082CEC1DC3C4FE001F870F /* LandingViewController.swift */; };
 		DA082CF01DC3C4FE001F870F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA082CEE1DC3C4FE001F870F /* Main.storyboard */; };
@@ -69,6 +75,8 @@
 		D32728630735EE0D08BE9D70 /* Pods_PracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA06D9271DC3F4600031F322 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DA06D92B1DC3F48D0031F322 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DA06D9361DC48DB30031F322 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		DA06D93A1DC48F340031F322 /* NavHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavHelper.swift; sourceTree = "<group>"; };
 		DA082CE71DC3C4FE001F870F /* Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA082CEA1DC3C4FE001F870F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA082CEC1DC3C4FE001F870F /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +154,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA06D9301DC4874A0031F322 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */,
+				DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */,
+				DA082D341DC3DA4E001F870F /* CardCollectionViewLayout.swift */,
+			);
+			name = CardView;
+			sourceTree = "<group>";
+		};
 		DA082CDE1DC3C4FE001F870F = {
 			isa = PBXGroup;
 			children = (
@@ -173,12 +191,12 @@
 			children = (
 				DA082CEA1DC3C4FE001F870F /* AppDelegate.swift */,
 				DA082CEC1DC3C4FE001F870F /* LandingViewController.swift */,
+				DA06D9361DC48DB30031F322 /* DetailsViewController.swift */,
 				DA082CEE1DC3C4FE001F870F /* Main.storyboard */,
 				DA082CF31DC3C4FE001F870F /* LaunchScreen.storyboard */,
-				DA082D2B1DC3D3E9001F870F /* CardCollectionView.swift */,
-				DA082D301DC3D7FC001F870F /* CardCollectionViewDataManager.swift */,
-				DA082D341DC3DA4E001F870F /* CardCollectionViewLayout.swift */,
 				DA06D9271DC3F4600031F322 /* Extension.swift */,
+				DA06D93A1DC48F340031F322 /* NavHelper.swift */,
+				DA06D9301DC4874A0031F322 /* CardView */,
 				DA082D221DC3D153001F870F /* CardViewCell */,
 				DA082D1B1DC3C8C7001F870F /* RemoteService */,
 				DA082D2F1DC3D3FE001F870F /* Data */,
@@ -515,6 +533,7 @@
 				DA082D211DC3CBA6001F870F /* Configuration.swift in Sources */,
 				DA082D1F1DC3C8F2001F870F /* DefaultRemoteService.swift in Sources */,
 				DA082CED1DC3C4FE001F870F /* LandingViewController.swift in Sources */,
+				DA06D93B1DC48F340031F322 /* NavHelper.swift in Sources */,
 				DA082D2C1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,
 				DA082D251DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
 				DA082D351DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */,
@@ -523,6 +542,7 @@
 				DA06D92C1DC3F48D0031F322 /* Model.swift in Sources */,
 				DA06D9281DC3F4600031F322 /* Extension.swift in Sources */,
 				DA082D1D1DC3C8E3001F870F /* RemoteService.swift in Sources */,
+				DA06D9371DC48DB30031F322 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,8 +551,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA06D92D1DC3F48D0031F322 /* Model.swift in Sources */,
+				DA06D93C1DC48F340031F322 /* NavHelper.swift in Sources */,
 				DA082D321DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */,
 				DA06D9291DC3F4600031F322 /* Extension.swift in Sources */,
+				DA06D9381DC48DB30031F322 /* DetailsViewController.swift in Sources */,
 				DA082D361DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */,
 				DA082D261DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
 				DA082D2D1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,
@@ -545,8 +567,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA06D92E1DC3F48D0031F322 /* Model.swift in Sources */,
+				DA06D93D1DC48F340031F322 /* NavHelper.swift in Sources */,
 				DA082D331DC3D7FC001F870F /* CardCollectionViewDataManager.swift in Sources */,
 				DA06D92A1DC3F4600031F322 /* Extension.swift in Sources */,
+				DA06D9391DC48DB30031F322 /* DetailsViewController.swift in Sources */,
 				DA082D371DC3DA4E001F870F /* CardCollectionViewLayout.swift in Sources */,
 				DA082D271DC3D1AC001F870F /* CardCollectionViewCell.swift in Sources */,
 				DA082D2E1DC3D3E9001F870F /* CardCollectionView.swift in Sources */,

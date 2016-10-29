@@ -11,9 +11,9 @@ import UIKit
 
 extension UIImageView {
     
-    func setImageOrPlaceholder(_ url: URL?, placeholder: String) {
+    func setImageOrPlaceholder(_ urlString: String, placeholder: String) {
         
-        guard let absoluteURL = url else {
+        guard let absoluteURL = URL(string: urlString) else {
             image = UIImage(named: placeholder)
             contentMode = .scaleAspectFill
             clipsToBounds = true
@@ -24,17 +24,11 @@ extension UIImageView {
         
         af_setImage(withURL: absoluteURL, placeholderImage: UIImage(named: placeholder), filter: nil, progress: nil, progressQueue: DispatchQueue.global(), imageTransition: UIImageView.ImageTransition.crossDissolve(0.6), runImageTransitionIfCached: true) { [weak self] (response) in
             
-            
             guard let strongSelf = self else { return }
             if let finalImage = response.result.value {
+                Configuration.sharedInstance.imageCache.add(finalImage, withIdentifier: urlString)
                 strongSelf.image = finalImage
             }
-            for subview in strongSelf.subviews {
-                if subview.isKind(of: UIActivityIndicatorView.classForCoder()) {
-                    subview.removeFromSuperview()
-                }
-            }
-            
         }
     }
 }

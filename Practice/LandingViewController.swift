@@ -11,7 +11,6 @@ import UIKit
  The ViewController for landing screen
  */
 final class LandingViewController: UIViewController {
-    @IBOutlet weak var headerView: UIView!
 
     private var cardCollectionView: CardCollectionView?
     private let cardCollectionViewDataManager = CardCollectionViewDataManager()
@@ -20,6 +19,7 @@ final class LandingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NavigationHelper.sharedInstance.setUp(self.navigationController!)
         remoteSerivce.getData { [unowned self] (entries, error) in
             if error == nil {
                 self.cardCollectionViewDataManager.a = entries
@@ -53,7 +53,7 @@ final class LandingViewController: UIViewController {
     private func layoutCardView() {
         if let cv = cardCollectionView {
             cv.translatesAutoresizingMaskIntoConstraints = false
-            cv.topAnchor.constraint(equalTo: headerView.bottomAnchor).isActive = true
+            topLayoutGuide.bottomAnchor.constraint(equalTo: cv.topAnchor).isActive = true
             view.leadingAnchor.constraint(equalTo: cv.leadingAnchor).isActive = true
             view.trailingAnchor.constraint(equalTo: cv.trailingAnchor).isActive = true
             view.bottomAnchor.constraint(equalTo: cv.bottomAnchor).isActive = true
