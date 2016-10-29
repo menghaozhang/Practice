@@ -12,14 +12,7 @@ final class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain, target: self, action: #selector(DetailsViewController.goBack))
-        navigationItem.leftBarButtonItem = backButton
         
     }
-    
-    @objc fileprivate func goBack(){
-        dismiss(animated: true, completion: nil)
-    }
-
 
 }

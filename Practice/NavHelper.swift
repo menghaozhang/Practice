@@ -10,9 +10,14 @@ import UIKit
 
 final class NavigationHelper: NSObject {
     
+    private struct Constants{
+        static let backText = "Back"
+    }
+    
     static let sharedInstance = NavigationHelper()
     
     private var navController: UINavigationController!
+    private var detailsViewController: UIViewController?
     
     internal func getNavigationController() -> UINavigationController {
         return navController
@@ -20,5 +25,18 @@ final class NavigationHelper: NSObject {
     
     internal func setUp(_ rootViewController: UINavigationController) {
         navController = rootViewController
+    }
+    
+    internal func navTo(_ viewController: UIViewController) {
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navController.present(navigationController, animated: true)
+        detailsViewController = viewController
+        viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(title: Constants.backText, style: UIBarButtonItemStyle.plain, target: self, action: #selector(NavigationHelper.goBack))
+    }
+    
+    @objc fileprivate func goBack() {
+        if let viewController = detailsViewController {
+            viewController.dismiss(animated: true, completion: nil)
+        }
     }
 }

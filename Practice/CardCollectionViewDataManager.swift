@@ -40,8 +40,8 @@ final class CardCollectionViewDataManager: NSObject, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyBoard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
-        let navigationController = UINavigationController(rootViewController: viewController!)
-        NavigationHelper.sharedInstance.getNavigationController().present(navigationController, animated: true)
+        NavigationHelper.sharedInstance.navTo(viewController!)
+        
     }
     
     
