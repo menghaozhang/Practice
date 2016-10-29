@@ -24,7 +24,8 @@ final class DefaultRemoteService: RemoteService {
                     }
                 }
             }
+        }else {
+            completion(nil, NSError(domain: "EmptyURL", code: 001))
         }
-        completion(nil, NSError(domain: "EmptyURL", code: 001))
     }
 }

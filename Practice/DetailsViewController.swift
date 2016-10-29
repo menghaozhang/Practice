@@ -15,20 +15,26 @@ final class DetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
     
+    private struct Constants {
+        static let fallBackTitle = "Unknow title"
+        static let fallBackArtist = "Unknow Artist"
+        static let placeHolder = "placeHolder"
+    }
     
     internal var item: Entry! {
         didSet {
-            detailImageView?.setImageOrPlaceholder(item.image ?? "", placeholder: "placeHolder")
-            titleLabel?.text = item.title ?? "No title"
-            artistLabel?.text = item.artist ?? "No artist"
+            detailImageView?.setImageOrPlaceholder(item.image ?? "", placeholder: Constants.placeHolder)
+            titleLabel?.text = item.title ?? Constants.fallBackTitle
+            artistLabel?.text = item.artist ?? Constants.fallBackArtist
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailImageView?.setImageOrPlaceholder(item.image ?? "", placeholder: "placeHolder")
-        titleLabel?.text = item.title ?? "No title"
-        artistLabel?.text = item.artist ?? "No artist"
+        self.navigationItem.title = item.title ?? Constants.fallBackTitle
+        detailImageView?.setImageOrPlaceholder(item.image ?? "", placeholder: Constants.placeHolder)
+        titleLabel?.text = item.title ?? Constants.fallBackTitle
+        artistLabel?.text = item.artist ?? Constants.fallBackArtist
     }
 
 }

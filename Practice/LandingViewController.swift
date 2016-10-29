@@ -20,17 +20,24 @@ final class LandingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NavigationHelper.sharedInstance.setUp(self.navigationController!)
+        fetchDataFromRemote()
+    }
+    
+    private func fetchDataFromRemote() {
         remoteSerivce.getData { [unowned self] (entries, error) in
             if error == nil {
                 self.cardCollectionViewDataManager.a = entries
                 self.cleanUpGame()
                 self.setUpGame()
             }else {
-                // handle Error
+                let alert = UIAlertController(title: "Alert", message: error?.domain, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Retry", style: UIAlertActionStyle.default, handler: { [weak self](alertAction) in
+                    self?.fetchDataFromRemote()
+                }))
+                alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
-        
-        
     }
     
     private func cleanUpGame() {
